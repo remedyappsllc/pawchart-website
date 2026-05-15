@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PawChart — Know When It's Serious, Before Panic Sets In</title>
-<meta name="description" content="PawChart uses AI to tell you if your dog needs the emergency vet — in under 60 seconds. Track vaccinations, find vets nearby, and manage your dog's health all in one free app.">
-<meta name="keywords" content="dog health app, dog symptom checker, emergency vet finder, dog vaccination tracker, AI pet health, dog health tracker android">
-<meta property="og:title" content="PawChart — AI Dog Health App">
-<meta property="og:description" content="Know when your dog needs the ER — before panic sets in. Free on Android.">
+<title>PawChart — The Dog Health App for Owners Who Care</title>
+<meta name="description" content="PawChart uses AI to tell you if your dog needs the emergency vet in under 60 seconds. Built for new puppy owners, anxious dog parents, and owners of senior dogs. Free on Android.">
+<meta name="keywords" content="new puppy health app, dog symptom checker, senior dog health tracker, first time dog owner app, dog emergency vet finder, AI pet health android">
+<meta property="og:title" content="PawChart — The Dog Health App for Owners Who Care">
+<meta property="og:description" content="Know when it's serious — before panic sets in. Free on Android.">
 <meta property="og:url" content="https://pawchart.app">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://pawchart.app">
@@ -16,6 +16,7 @@
   body { font-family: 'Montserrat', sans-serif; background: #F5F5F5; color: #1A2F4A; }
   a { text-decoration: none; color: inherit; }
 
+  /* NAV */
   nav { background: #1A2F4A; padding: 16px 40px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
   .nav-logo { display: flex; align-items: center; gap: 10px; }
   .nav-dot { width: 12px; height: 12px; background: #F5A623; border-radius: 50%; }
@@ -27,74 +28,59 @@
   .nav-cta:hover { opacity: 0.9; }
 
   /* HERO */
-  .hero { background: #1A2F4A; padding: 90px 40px 80px; text-align: center; position: relative; overflow: hidden; }
-  .hero::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 60% 40%, rgba(245,166,35,0.06) 0%, transparent 60%); pointer-events: none; }
+  .hero { background: #1A2F4A; padding: 90px 40px 80px; text-align: center; }
   .hero-badge { display: inline-block; background: rgba(245,166,35,0.15); color: #F5A623; padding: 6px 16px; border-radius: 99px; font-size: 13px; font-weight: 600; margin-bottom: 28px; letter-spacing: 0.5px; }
-  .hero h1 { color: white; font-size: clamp(32px, 5vw, 58px); font-weight: 800; line-height: 1.1; margin-bottom: 12px; letter-spacing: -1.5px; max-width: 760px; margin-left: auto; margin-right: auto; }
+  .hero h1 { color: white; font-size: clamp(32px, 5vw, 58px); font-weight: 800; line-height: 1.1; margin-bottom: 12px; letter-spacing: -1.5px; max-width: 780px; margin-left: auto; margin-right: auto; }
   .hero h1 span { color: #F5A623; }
-  .hero-sub { color: rgba(255,255,255,0.65); font-size: 19px; line-height: 1.6; max-width: 520px; margin: 16px auto 40px; }
+  .hero-sub { color: rgba(255,255,255,0.65); font-size: 19px; line-height: 1.6; max-width: 540px; margin: 16px auto 40px; }
   .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px; }
-  .btn-primary { background: #F5A623; color: #412402; padding: 18px 36px; border-radius: 12px; font-weight: 700; font-size: 17px; display: inline-flex; align-items: center; gap: 10px; transition: transform 0.2s, opacity 0.2s; }
-  .btn-primary:hover { transform: translateY(-2px); opacity: 0.95; }
+  .btn-primary { background: #F5A623; color: #412402; padding: 18px 36px; border-radius: 12px; font-weight: 700; font-size: 17px; display: inline-flex; align-items: center; gap: 10px; transition: transform 0.2s; }
+  .btn-primary:hover { transform: translateY(-2px); }
   .btn-secondary { background: rgba(255,255,255,0.1); color: white; padding: 18px 36px; border-radius: 12px; font-weight: 600; font-size: 17px; border: 1px solid rgba(255,255,255,0.2); transition: background 0.2s; }
   .btn-secondary:hover { background: rgba(255,255,255,0.15); }
   .hero-fine { color: rgba(255,255,255,0.35); font-size: 13px; }
 
-  /* SOCIAL PROOF BAR */
+  /* AUDIENCE STRIP */
+  .audience-strip { background: white; padding: 28px 40px; border-bottom: 1px solid #eee; }
+  .audience-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .audience-pill { background: #F5F5F5; border: 1px solid #E0E0E0; border-radius: 99px; padding: 8px 18px; font-size: 13px; font-weight: 600; color: #1A2F4A; display: flex; align-items: center; gap: 8px; }
+
+  /* PROOF BAR */
   .proof-bar { background: #F5A623; padding: 14px 40px; display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; }
   .proof-item { color: #412402; font-weight: 700; font-size: 14px; display: flex; align-items: center; gap: 8px; }
 
-  /* SCENARIO SECTION */
-  .scenarios { padding: 80px 40px; max-width: 1100px; margin: 0 auto; }
+  /* SECTION BASE */
   .section-label { color: #F5A623; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; }
   .section-title { font-size: clamp(26px, 4vw, 40px); font-weight: 800; color: #1A2F4A; margin-bottom: 12px; letter-spacing: -0.5px; }
   .section-sub { font-size: 17px; color: #666; line-height: 1.7; margin-bottom: 48px; max-width: 560px; }
-  .scenario-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-  .scenario-card { background: white; border-radius: 16px; padding: 24px; border: 1px solid #eee; }
-  .scenario-time { font-size: 12px; color: #999; margin-bottom: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
-  .scenario-situation { font-size: 16px; font-weight: 700; color: #1A2F4A; margin-bottom: 8px; line-height: 1.4; }
-  .scenario-symptom { font-size: 14px; color: #666; margin-bottom: 16px; line-height: 1.5; font-style: italic; }
-  .scenario-result { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 99px; font-size: 13px; font-weight: 700; }
-  .result-home { background: #EAF3DE; color: #27500A; }
-  .result-soon { background: #FFF8ED; color: #633806; }
-  .result-er { background: #FCEBEB; color: #791F1F; }
 
-  /* SCREENSHOTS */
-  .screenshots { background: #1A2F4A; padding: 80px 40px; text-align: center; }
-  .screenshots .section-label { color: #F5A623; }
-  .screenshots .section-title { color: white; margin-bottom: 8px; }
-  .screenshots .section-sub { color: rgba(255,255,255,0.6); margin: 0 auto 48px; }
-  .screenshot-row { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
-  .screenshot-frame { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 20px 16px; max-width: 200px; }
-  .screenshot-mock { background: #0F1E2E; border-radius: 12px; overflow: hidden; margin-bottom: 12px; }
-  .mock-header { background: #1A2F4A; padding: 12px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid rgba(255,255,255,0.1); }
-  .mock-dot { width: 8px; height: 8px; background: #F5A623; border-radius: 50%; }
-  .mock-title { color: white; font-size: 11px; font-weight: 700; }
-  .mock-body { padding: 12px; }
-  .mock-card { background: rgba(255,255,255,0.08); border-radius: 8px; padding: 10px; margin-bottom: 8px; }
-  .mock-line { height: 8px; background: rgba(255,255,255,0.2); border-radius: 4px; margin-bottom: 6px; }
-  .mock-line.short { width: 60%; }
-  .mock-line.amber { background: rgba(245,166,35,0.4); }
-  .mock-btn { background: #F5A623; border-radius: 6px; padding: 8px; margin-top: 8px; }
-  .mock-btn-text { height: 8px; background: rgba(65,36,2,0.6); border-radius: 4px; }
-  .mock-chat { display: flex; flex-direction: column; gap: 6px; }
-  .mock-bubble-ai { background: rgba(255,255,255,0.1); border-radius: 8px 8px 8px 2px; padding: 8px; align-self: flex-start; width: 80%; }
-  .mock-bubble-user { background: #1A2F4A; border: 1px solid rgba(255,255,255,0.2); border-radius: 8px 8px 2px 8px; padding: 8px; align-self: flex-end; width: 60%; }
-  .mock-urgency { background: rgba(234,243,222,0.15); border-radius: 6px; padding: 6px 8px; display: flex; align-items: center; gap: 6px; margin-top: 6px; }
-  .mock-urgency-dot { width: 6px; height: 6px; background: #97C459; border-radius: 50%; flex-shrink: 0; }
-  .screenshot-label { color: rgba(255,255,255,0.7); font-size: 12px; font-weight: 600; }
+  /* WHO IT'S FOR */
+  .audiences { padding: 80px 40px; max-width: 1100px; margin: 0 auto; }
+  .audience-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+  .audience-card { background: white; border-radius: 16px; padding: 28px; border: 1px solid #eee; border-left: 5px solid #F5A623; transition: transform 0.2s; }
+  .audience-card:hover { transform: translateY(-3px); }
+  .audience-card-emoji { font-size: 32px; margin-bottom: 12px; }
+  .audience-card h3 { font-size: 17px; font-weight: 800; color: #1A2F4A; margin-bottom: 8px; }
+  .audience-card p { font-size: 14px; color: #666; line-height: 1.65; }
+  .audience-card .audience-quote { font-size: 13px; color: #999; font-style: italic; margin-top: 12px; padding-top: 12px; border-top: 1px solid #f0f0f0; }
 
-  /* DEMO VIDEO */
-  .demo { padding: 80px 40px; max-width: 900px; margin: 0 auto; text-align: center; }
-  .video-placeholder { background: #1A2F4A; border-radius: 20px; padding: 80px 40px; position: relative; cursor: pointer; transition: transform 0.2s; }
-  .video-placeholder:hover { transform: scale(1.01); }
-  .play-btn { width: 72px; height: 72px; background: #F5A623; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
-  .play-triangle { width: 0; height: 0; border-top: 14px solid transparent; border-bottom: 14px solid transparent; border-left: 24px solid #412402; margin-left: 4px; }
-  .video-placeholder p { color: white; font-size: 18px; font-weight: 700; margin-bottom: 8px; }
-  .video-placeholder span { color: rgba(255,255,255,0.5); font-size: 14px; }
+  /* SCENARIOS */
+  .scenarios { background: #1A2F4A; padding: 80px 40px; }
+  .scenarios-inner { max-width: 1100px; margin: 0 auto; }
+  .scenarios .section-title { color: white; }
+  .scenarios .section-sub { color: rgba(255,255,255,0.6); }
+  .scenario-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+  .scenario-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 24px; }
+  .scenario-owner { font-size: 11px; color: #F5A623; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+  .scenario-situation { font-size: 15px; font-weight: 700; color: white; margin-bottom: 8px; line-height: 1.4; }
+  .scenario-symptom { font-size: 13px; color: rgba(255,255,255,0.55); margin-bottom: 16px; line-height: 1.5; font-style: italic; }
+  .scenario-result { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 99px; font-size: 12px; font-weight: 700; }
+  .result-home { background: rgba(234,243,222,0.15); color: #97C459; border: 1px solid rgba(151,196,89,0.3); }
+  .result-soon { background: rgba(255,248,237,0.1); color: #FAC775; border: 1px solid rgba(250,199,117,0.3); }
+  .result-er { background: rgba(252,235,235,0.1); color: #F09595; border: 1px solid rgba(240,149,149,0.3); }
 
   /* FEATURES */
-  .features { background: #F5F5F5; padding: 80px 40px; }
+  .features { padding: 80px 40px; background: #F5F5F5; }
   .features-inner { max-width: 1100px; margin: 0 auto; }
   .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
   .feature-card { background: white; border-radius: 16px; padding: 28px; border: 1px solid #eee; transition: transform 0.2s; }
@@ -108,20 +94,45 @@
   .icon-teal { background: #E1F5EE; }
   .feature-card h3 { font-size: 16px; font-weight: 700; color: #1A2F4A; margin-bottom: 8px; }
   .feature-card p { font-size: 14px; color: #666; line-height: 1.65; }
+  .feature-tag { display: inline-block; background: #F5F5F5; color: #999; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 99px; margin-top: 10px; }
+
+  /* SCREENSHOTS */
+  .screenshots { background: white; padding: 80px 40px; }
+  .screenshots-inner { max-width: 1100px; margin: 0 auto; }
+  .screenshot-row { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-top: 48px; }
+  .screenshot-frame { background: #F5F5F5; border-radius: 20px; padding: 20px 16px; max-width: 200px; text-align: center; }
+  .screenshot-mock { background: #1A2F4A; border-radius: 12px; overflow: hidden; margin-bottom: 12px; }
+  .mock-header { background: #0F1E2E; padding: 10px 12px; display: flex; align-items: center; gap: 6px; }
+  .mock-dot { width: 7px; height: 7px; background: #F5A623; border-radius: 50%; }
+  .mock-title { color: white; font-size: 10px; font-weight: 700; }
+  .mock-body { padding: 10px; }
+  .mock-card { background: rgba(255,255,255,0.07); border-radius: 6px; padding: 8px; margin-bottom: 6px; }
+  .mock-line { height: 7px; background: rgba(255,255,255,0.18); border-radius: 4px; margin-bottom: 5px; }
+  .mock-line.short { width: 55%; }
+  .mock-line.amber { background: rgba(245,166,35,0.35); }
+  .mock-line.green { background: rgba(151,196,89,0.4); }
+  .mock-btn { background: #F5A623; border-radius: 5px; padding: 7px; margin-top: 6px; }
+  .mock-btn-line { height: 7px; background: rgba(65,36,2,0.5); border-radius: 3px; }
+  .mock-chat { display: flex; flex-direction: column; gap: 5px; }
+  .mock-bubble-ai { background: rgba(255,255,255,0.08); border-radius: 6px 6px 6px 2px; padding: 7px; align-self: flex-start; width: 78%; }
+  .mock-bubble-user { background: rgba(245,166,35,0.2); border-radius: 6px 6px 2px 6px; padding: 7px; align-self: flex-end; width: 55%; }
+  .mock-urgency { background: rgba(151,196,89,0.15); border-radius: 5px; padding: 5px 7px; display: flex; align-items: center; gap: 5px; margin-top: 5px; }
+  .mock-urgency-dot { width: 5px; height: 5px; background: #97C459; border-radius: 50%; flex-shrink: 0; }
+  .screenshot-label { color: #1A2F4A; font-size: 12px; font-weight: 700; }
+  .screenshot-sublabel { color: #999; font-size: 11px; margin-top: 2px; }
 
   /* TESTIMONIALS */
-  .testimonials { background: white; padding: 80px 40px; }
+  .testimonials { background: #F5F5F5; padding: 80px 40px; }
   .testimonials-inner { max-width: 1100px; margin: 0 auto; }
   .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 48px; }
-  .testimonial-card { background: #F5F5F5; border-radius: 16px; padding: 28px; position: relative; }
-  .stars { color: #F5A623; font-size: 16px; margin-bottom: 12px; letter-spacing: 2px; }
-  .testimonial-text { font-size: 15px; color: #1A2F4A; line-height: 1.7; margin-bottom: 16px; font-style: italic; }
+  .testimonial-card { background: white; border-radius: 16px; padding: 28px; position: relative; }
+  .stars { color: #F5A623; font-size: 15px; margin-bottom: 12px; letter-spacing: 2px; }
+  .testimonial-text { font-size: 15px; color: #1A2F4A; line-height: 1.75; margin-bottom: 16px; font-style: italic; }
   .testimonial-author { display: flex; align-items: center; gap: 10px; }
-  .author-avatar { width: 36px; height: 36px; border-radius: 50%; background: #1A2F4A; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; font-weight: 700; }
-  .author-info { font-size: 13px; }
-  .author-name { font-weight: 700; color: #1A2F4A; }
-  .author-detail { color: #999; }
-  .testimonial-badge { position: absolute; top: 20px; right: 20px; background: #EAF3DE; color: #27500A; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 99px; }
+  .author-avatar { width: 38px; height: 38px; border-radius: 50%; background: #1A2F4A; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; font-weight: 700; flex-shrink: 0; }
+  .author-name { font-weight: 700; color: #1A2F4A; font-size: 13px; }
+  .author-detail { color: #999; font-size: 12px; }
+  .testimonial-owner-type { position: absolute; top: 20px; right: 20px; background: #FFF8ED; color: #854F0B; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 99px; }
 
   /* HOW IT WORKS */
   .how { background: #1A2F4A; padding: 80px 40px; }
@@ -134,11 +145,31 @@
   .step h3 { color: white; font-size: 15px; font-weight: 700; margin-bottom: 8px; }
   .step p { color: rgba(255,255,255,0.55); font-size: 13px; line-height: 1.65; }
 
+  /* URGENCY */
+  .urgency { padding: 80px 40px; max-width: 900px; margin: 0 auto; }
+  .urgency-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 40px; }
+  .urgency-card { padding: 24px; border-radius: 14px; }
+  .urgency-card.green { background: #EAF3DE; border: 1px solid #C0DD97; }
+  .urgency-card.amber { background: #FFF8ED; border: 1px solid #FAC775; }
+  .urgency-card.red { background: #FCEBEB; border: 1px solid #F7C1C1; }
+  .urgency-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 6px; }
+  .urgency-dot.green { background: #3B6D11; }
+  .urgency-dot.amber { background: #854F0B; }
+  .urgency-dot.red { background: #A32D2D; }
+  .urgency-card h3 { font-size: 15px; font-weight: 800; margin-bottom: 6px; }
+  .urgency-card.green h3 { color: #27500A; }
+  .urgency-card.amber h3 { color: #633806; }
+  .urgency-card.red h3 { color: #791F1F; }
+  .urgency-card p { font-size: 13px; line-height: 1.65; }
+  .urgency-card.green p { color: #3B6D11; }
+  .urgency-card.amber p { color: #854F0B; }
+  .urgency-card.red p { color: #A32D2D; }
+
   /* PRICING */
-  .pricing { padding: 80px 40px; background: #F5F5F5; }
+  .pricing { background: white; padding: 80px 40px; }
   .pricing-inner { max-width: 760px; margin: 0 auto; text-align: center; }
   .pricing-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 40px; }
-  .pricing-card { background: white; border-radius: 16px; padding: 32px; border: 1px solid #eee; text-align: left; }
+  .pricing-card { background: #F5F5F5; border-radius: 16px; padding: 32px; border: 1px solid #eee; text-align: left; }
   .pricing-card.featured { background: #1A2F4A; border-color: #1A2F4A; position: relative; }
   .featured-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #F5A623; color: #412402; padding: 4px 16px; border-radius: 99px; font-size: 12px; font-weight: 700; white-space: nowrap; }
   .plan-name { font-size: 13px; font-weight: 600; color: #999; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
@@ -148,7 +179,7 @@
   .price-period { font-size: 14px; color: #999; margin-bottom: 24px; }
   .pricing-card.featured .price-period { color: rgba(255,255,255,0.4); }
   .pricing-features { list-style: none; margin-bottom: 28px; }
-  .pricing-features li { font-size: 14px; color: #444; padding: 7px 0; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #f0f0f0; }
+  .pricing-features li { font-size: 14px; color: #444; padding: 7px 0; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #e8e8e8; }
   .pricing-features li:last-child { border-bottom: none; }
   .pricing-card.featured .pricing-features li { color: rgba(255,255,255,0.8); border-bottom-color: rgba(255,255,255,0.08); }
   .check { color: #3B6D11; font-weight: 700; font-size: 16px; }
@@ -162,9 +193,10 @@
   /* CTA */
   .cta { background: #F5A623; padding: 80px 40px; text-align: center; }
   .cta h2 { font-size: clamp(28px, 4vw, 46px); font-weight: 800; color: #412402; margin-bottom: 16px; letter-spacing: -0.5px; line-height: 1.15; }
-  .cta p { color: #633806; font-size: 18px; margin-bottom: 36px; }
+  .cta p { color: #633806; font-size: 18px; margin-bottom: 36px; max-width: 520px; margin-left: auto; margin-right: auto; }
   .btn-dark { background: #1A2F4A; color: white; padding: 18px 40px; border-radius: 12px; font-weight: 700; font-size: 17px; display: inline-flex; align-items: center; gap: 10px; transition: transform 0.2s; }
   .btn-dark:hover { transform: translateY(-2px); }
+  .cta-fine { color: rgba(65,36,2,0.5); font-size: 13px; margin-top: 16px; }
 
   /* FOOTER */
   footer { background: #1A2F4A; padding: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
@@ -178,10 +210,8 @@
   @media (max-width: 600px) {
     nav { padding: 16px 20px; }
     .nav-links { display: none; }
-    .hero { padding: 60px 20px; }
+    .hero, .audiences, .scenarios, .features, .screenshots, .testimonials, .how, .urgency, .pricing, .cta { padding: 60px 20px; }
     .proof-bar { gap: 20px; padding: 14px 20px; }
-    .scenarios, .features, .testimonials, .demo, .pricing, .how { padding: 60px 20px; }
-    .cta { padding: 60px 20px; }
     footer { padding: 32px 20px; flex-direction: column; text-align: center; }
   }
 </style>
@@ -196,8 +226,9 @@
     <span class="nav-name">PawChart</span>
   </div>
   <div class="nav-links">
+    <a href="#who">Who it's for</a>
     <a href="#features">Features</a>
-    <a href="#testimonials">Reviews</a>
+    <a href="#reviews">Reviews</a>
     <a href="#pricing">Pricing</a>
   </div>
   <a href="https://play.google.com/store/apps/details?id=com.pawchart.app" class="nav-cta">Download Free</a>
@@ -205,198 +236,244 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-badge">Now live on Google Play</div>
+  <div class="hero-badge">Free on Google Play — Android</div>
   <h1>Know when it's serious —<br><span>before panic sets in.</span></h1>
-  <p class="hero-sub">AI-powered symptom triage for dog owners. Get a clear answer in under 60 seconds — no vet degree required.</p>
+  <p class="hero-sub">The AI-powered dog health app that tells you if your pup needs the ER — in under 60 seconds. Built for owners who love their dogs like family.</p>
   <div class="hero-buttons">
     <a href="https://play.google.com/store/apps/details?id=com.pawchart.app" class="btn-primary">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M3 20.5v-17c0-.83 1-1.3 1.63-.78l14 8.5c.57.35.57 1.21 0 1.56l-14 8.5C4 21.8 3 21.33 3 20.5z"/></svg>
       Get it on Google Play
     </a>
-    <a href="#features" class="btn-secondary">See how it works</a>
+    <a href="#who" class="btn-secondary">See who it's for</a>
   </div>
   <p class="hero-fine">Free to download · 7-day premium trial · No credit card required</p>
 </section>
 
-<!-- SOCIAL PROOF -->
-<div class="proof-bar">
-  <div class="proof-item">🐾 Free on Android</div>
-  <div class="proof-item">⚡ Answer in 60 seconds</div>
-  <div class="proof-item">🤖 Powered by Claude AI</div>
-  <div class="proof-item">📍 Find emergency vets instantly</div>
+<!-- AUDIENCE PILLS -->
+<div class="audience-strip">
+  <div class="audience-inner">
+    <div class="audience-pill">🐶 New puppy owners</div>
+    <div class="audience-pill">😰 Anxious dog parents</div>
+    <div class="audience-pill">🐾 Senior dog owners</div>
+    <div class="audience-pill">💛 First-time dog owners</div>
+    <div class="audience-pill">✨ Devoted pet parents</div>
+  </div>
 </div>
 
+<!-- PROOF BAR -->
+<div class="proof-bar">
+  <div class="proof-item">🤖 Powered by Claude AI</div>
+  <div class="proof-item">⚡ Answer in 60 seconds</div>
+  <div class="proof-item">📍 Find emergency vets instantly</div>
+  <div class="proof-item">🆓 Free to download</div>
+</div>
+
+<!-- WHO IT'S FOR -->
+<section class="audiences" id="who">
+  <div class="section-label">Made for you</div>
+  <h2 class="section-title">Finally — a dog health app<br>that gets it.</h2>
+  <p class="section-sub">Whether you just brought home your first puppy or you're managing the health of a senior dog, PawChart gives you the confidence to make the right call.</p>
+  <div class="audience-grid">
+    <div class="audience-card">
+      <div class="audience-card-emoji">🐶</div>
+      <h3>New puppy owners</h3>
+      <p>Everything is new and every sneeze feels like a crisis. PawChart helps you tell the difference between normal puppy behavior and something that actually needs attention — so you can enjoy puppyhood without the constant worry.</p>
+      <div class="audience-quote">"Is this normal or should I be worried?" — PawChart answers that question every time.</div>
+    </div>
+    <div class="audience-card">
+      <div class="audience-card-emoji">😰</div>
+      <h3>Anxious dog owners</h3>
+      <p>Your dog is your world, and when something seems off, your mind goes straight to worst-case scenarios. PawChart replaces that spiral with a clear, calm answer — backed by AI that asks exactly the right questions.</p>
+      <div class="audience-quote">Stop Googling symptoms at midnight. Get an actual answer instead.</div>
+    </div>
+    <div class="audience-card">
+      <div class="audience-card-emoji">🐾</div>
+      <h3>Senior dog owners</h3>
+      <p>Older dogs hide pain well and their symptoms can be subtle. PawChart tracks your senior dog's health history, flags changes over time, and helps you decide when a symptom warrants urgent attention.</p>
+      <div class="audience-quote">Your senior dog deserves the same level of care they've always given you.</div>
+    </div>
+    <div class="audience-card">
+      <div class="audience-card-emoji">💛</div>
+      <h3>First-time dog owners</h3>
+      <p>Nobody hands you a manual when you bring a dog home. PawChart is that manual — giving you the knowledge and tools to keep your dog healthy, from vaccine tracking to knowing when it's a real emergency.</p>
+      <div class="audience-quote">Feel like a confident dog parent from day one.</div>
+    </div>
+    <div class="audience-card">
+      <div class="audience-card-emoji">✨</div>
+      <h3>Devoted pet parents</h3>
+      <p>You treat your dog like family — because they are family. PawChart gives you the premium care tools to match that commitment: complete health records, a digital ID card, and AI triage available any time of day or night.</p>
+      <div class="audience-quote">Your dog gets the best. Their health app should too.</div>
+    </div>
+  </div>
+</section>
+
 <!-- EMERGENCY SCENARIOS -->
-<section class="scenarios" id="scenarios">
-  <div class="section-label">Real situations, clear answers</div>
-  <h2 class="section-title">Stop guessing.<br>Start knowing.</h2>
-  <p class="section-sub">PawChart handles the moments that keep dog owners up at night — giving you a clear answer when you need it most.</p>
-  <div class="scenario-grid">
-    <div class="scenario-card">
-      <div class="scenario-time">2:00 AM</div>
-      <div class="scenario-situation">Your Labrador is limping and won't put weight on his back leg</div>
-      <div class="scenario-symptom">"He was fine at dinner. Now he's whimpering every time he tries to stand."</div>
-      <div class="scenario-result result-soon">● See vet within 24 hours</div>
-    </div>
-    <div class="scenario-card">
-      <div class="scenario-time">Sunday afternoon</div>
-      <div class="scenario-situation">Your Golden Retriever ate something from the trash and is vomiting</div>
-      <div class="scenario-symptom">"She got into the kitchen bin. She's thrown up twice but seems alert."</div>
-      <div class="scenario-result result-home">● Watch at home — monitor closely</div>
-    </div>
-    <div class="scenario-card">
-      <div class="scenario-time">After dinner</div>
-      <div class="scenario-situation">Your Great Dane's stomach looks swollen and he keeps trying to vomit</div>
-      <div class="scenario-symptom">"His belly looks bigger than normal. He's restless and can't get comfortable."</div>
-      <div class="scenario-result result-er">● Go to emergency vet NOW</div>
-    </div>
-    <div class="scenario-card">
-      <div class="scenario-time">Morning walk</div>
-      <div class="scenario-situation">Your Beagle ate something in the park and now seems lethargic</div>
-      <div class="scenario-symptom">"She ate something off the ground. Now she's slow and not interested in food."</div>
-      <div class="scenario-result result-soon">● See vet within 24 hours</div>
+<section class="scenarios">
+  <div class="scenarios-inner">
+    <div class="section-label">Real moments, clear answers</div>
+    <h2 class="section-title" style="color:white;">The moments PawChart<br>was built for.</h2>
+    <p class="section-sub">Every dog owner faces these moments. PawChart makes sure you always know what to do next.</p>
+    <div class="scenario-grid">
+      <div class="scenario-card">
+        <div class="scenario-owner">New puppy owner · 11pm</div>
+        <div class="scenario-situation">8-week-old puppy is lethargic and not eating after her first day home</div>
+        <div class="scenario-symptom">"She was so energetic this morning. Now she won't touch her food and just sleeps."</div>
+        <div class="scenario-result result-soon">● See vet within 24 hours</div>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-owner">Anxious dog parent · 2am</div>
+        <div class="scenario-situation">Golden Retriever limping suddenly and won't put weight on his back leg</div>
+        <div class="scenario-symptom">"He was totally fine at dinner. Now he's whimpering when he tries to stand."</div>
+        <div class="scenario-result result-soon">● See vet within 24 hours</div>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-owner">Senior dog owner · Sunday</div>
+        <div class="scenario-situation">12-year-old Lab is breathing harder than usual and seems uncomfortable lying down</div>
+        <div class="scenario-symptom">"She keeps changing positions and her breathing sounds different than normal."</div>
+        <div class="scenario-result result-er">● Go to emergency vet NOW</div>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-owner">First-time owner · after dinner</div>
+        <div class="scenario-situation">Great Dane's stomach looks swollen and he keeps trying to retch without vomiting</div>
+        <div class="scenario-symptom">"His belly looks bigger than this morning. He's pacing and can't get comfortable."</div>
+        <div class="scenario-result result-er">● Go to emergency vet NOW</div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- APP SCREENSHOTS -->
-<section class="screenshots" id="screenshots">
-  <div class="section-label">Inside the app</div>
-  <h2 class="section-title">Everything in one place</h2>
-  <p class="section-sub">Clean, simple, built for the moments when you need answers fast.</p>
-  <div class="screenshot-row">
-    <div class="screenshot-frame">
-      <div class="screenshot-mock">
-        <div class="mock-header">
-          <div class="mock-dot"></div>
-          <div class="mock-title">PawChart</div>
-        </div>
-        <div class="mock-body">
-          <div class="mock-card">
-            <div class="mock-line"></div>
-            <div class="mock-line short"></div>
-          </div>
-          <div class="mock-card">
-            <div class="mock-line"></div>
-            <div class="mock-line short"></div>
-          </div>
-          <div class="mock-btn"><div class="mock-btn-text"></div></div>
-        </div>
-      </div>
-      <div class="screenshot-label">Dog Profiles</div>
-    </div>
-    <div class="screenshot-frame">
-      <div class="screenshot-mock">
-        <div class="mock-header">
-          <div class="mock-dot"></div>
-          <div class="mock-title">Symptom Checker</div>
-        </div>
-        <div class="mock-body">
-          <div class="mock-chat">
-            <div class="mock-bubble-ai"><div class="mock-line"></div><div class="mock-line short"></div></div>
-            <div class="mock-bubble-user"><div class="mock-line short"></div></div>
-            <div class="mock-bubble-ai"><div class="mock-line"></div></div>
-            <div class="mock-urgency"><div class="mock-urgency-dot"></div><div class="mock-line short" style="margin:0;flex:1;background:rgba(151,196,89,0.4)"></div></div>
+<section class="screenshots">
+  <div class="screenshots-inner">
+    <div class="section-label">Inside PawChart</div>
+    <h2 class="section-title">Everything your dog needs,<br>beautifully simple.</h2>
+    <p class="section-sub">Designed to be fast and clear — especially when you're stressed and need answers quickly.</p>
+    <div class="screenshot-row">
+      <div class="screenshot-frame">
+        <div class="screenshot-mock">
+          <div class="mock-header"><div class="mock-dot"></div><div class="mock-title">PawChart</div></div>
+          <div class="mock-body">
+            <div class="mock-card"><div class="mock-line"></div><div class="mock-line short"></div></div>
+            <div class="mock-card"><div class="mock-line"></div><div class="mock-line short"></div></div>
+            <div class="mock-btn"><div class="mock-btn-line"></div></div>
           </div>
         </div>
+        <div class="screenshot-label">Dog Profiles</div>
+        <div class="screenshot-sublabel">All your dogs in one place</div>
       </div>
-      <div class="screenshot-label">AI Triage</div>
-    </div>
-    <div class="screenshot-frame">
-      <div class="screenshot-mock">
-        <div class="mock-header">
-          <div class="mock-dot"></div>
-          <div class="mock-title">Health Records</div>
+      <div class="screenshot-frame">
+        <div class="screenshot-mock">
+          <div class="mock-header"><div class="mock-dot"></div><div class="mock-title">Symptom Checker</div></div>
+          <div class="mock-body">
+            <div class="mock-chat">
+              <div class="mock-bubble-ai"><div class="mock-line"></div><div class="mock-line short"></div></div>
+              <div class="mock-bubble-user"><div class="mock-line short"></div></div>
+              <div class="mock-bubble-ai"><div class="mock-line"></div></div>
+              <div class="mock-urgency"><div class="mock-urgency-dot"></div><div class="mock-line short" style="margin:0;flex:1;background:rgba(151,196,89,0.4)"></div></div>
+            </div>
+          </div>
         </div>
-        <div class="mock-body">
-          <div class="mock-card"><div class="mock-line amber"></div><div class="mock-line short"></div></div>
-          <div class="mock-card"><div class="mock-line amber"></div><div class="mock-line short"></div></div>
-          <div class="mock-card"><div class="mock-line amber"></div><div class="mock-line short"></div></div>
-        </div>
+        <div class="screenshot-label">AI Triage</div>
+        <div class="screenshot-sublabel">Clear answer in 60 seconds</div>
       </div>
-      <div class="screenshot-label">Vaccinations</div>
-    </div>
-    <div class="screenshot-frame">
-      <div class="screenshot-mock">
-        <div class="mock-header">
-          <div class="mock-dot"></div>
-          <div class="mock-title">Find a Vet</div>
+      <div class="screenshot-frame">
+        <div class="screenshot-mock">
+          <div class="mock-header"><div class="mock-dot"></div><div class="mock-title">Health Records</div></div>
+          <div class="mock-body">
+            <div class="mock-card"><div class="mock-line amber"></div><div class="mock-line short"></div></div>
+            <div class="mock-card"><div class="mock-line amber"></div><div class="mock-line short"></div></div>
+            <div class="mock-card"><div class="mock-line amber"></div><div class="mock-line short"></div></div>
+          </div>
         </div>
-        <div class="mock-body">
-          <div class="mock-card"><div class="mock-line"></div><div class="mock-line short" style="background:rgba(151,196,89,0.4)"></div></div>
-          <div class="mock-card"><div class="mock-line"></div><div class="mock-line short" style="background:rgba(151,196,89,0.4)"></div></div>
-          <div class="mock-card"><div class="mock-line"></div><div class="mock-line short" style="background:rgba(226,75,74,0.3)"></div></div>
-        </div>
+        <div class="screenshot-label">Vaccinations</div>
+        <div class="screenshot-sublabel">Never miss a booster</div>
       </div>
-      <div class="screenshot-label">Vet Finder</div>
+      <div class="screenshot-frame">
+        <div class="screenshot-mock">
+          <div class="mock-header"><div class="mock-dot"></div><div class="mock-title">Find a Vet</div></div>
+          <div class="mock-body">
+            <div class="mock-card"><div class="mock-line"></div><div class="mock-line short green"></div></div>
+            <div class="mock-card"><div class="mock-line"></div><div class="mock-line short green"></div></div>
+            <div class="mock-card"><div class="mock-line"></div><div class="mock-line short" style="background:rgba(226,75,74,0.3)"></div></div>
+          </div>
+        </div>
+        <div class="screenshot-label">Vet Finder</div>
+        <div class="screenshot-sublabel">Open clinics near you</div>
+      </div>
     </div>
-  </div>
-</section>
-
-<!-- DEMO VIDEO -->
-<section class="demo" id="demo">
-  <div class="section-label">See it in action</div>
-  <h2 class="section-title">60 seconds to clarity</h2>
-  <p class="section-sub" style="margin: 0 auto 40px; text-align:center;">Watch PawChart triage a real symptom from start to answer.</p>
-  <div class="video-placeholder">
-    <div class="play-btn"><div class="play-triangle"></div></div>
-    <p>Watch the demo</p>
-    <span>Symptom checker in action — 60 seconds</span>
   </div>
 </section>
 
 <!-- FEATURES -->
 <section class="features" id="features">
   <div class="features-inner">
-    <div class="section-label">Everything you need</div>
-    <h2 class="section-title">Built for dog owners<br>who take health seriously</h2>
-    <p class="section-sub">PawChart combines AI-powered guidance with complete health tracking so you always know what's best for your dog.</p>
+    <div class="section-label">Everything in one app</div>
+    <h2 class="section-title">Built for the dog parent<br>who doesn't settle.</h2>
+    <p class="section-sub">Six tools that work together to give your dog the level of care they deserve.</p>
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-icon icon-green">🤖</div>
         <h3>AI Symptom Checker</h3>
-        <p>Describe your dog's symptoms and get instant triage powered by Claude AI. Breed and age aware — asks exactly the right follow-up questions.</p>
+        <p>Describe what you're seeing and get instant triage from Claude AI. Breed-aware, age-aware, and designed to ask exactly the right follow-up questions.</p>
+        <span class="feature-tag">Great for anxious owners</span>
       </div>
       <div class="feature-card">
         <div class="feature-icon icon-amber">💉</div>
         <h3>Vaccination Tracker</h3>
-        <p>Track all vaccines, due dates, and prescription history. Never forget a booster or lose a record again.</p>
+        <p>Track every vaccine, booster, and prescription. Get reminders before due dates so your pup never falls behind on their care.</p>
+        <span class="feature-tag">Great for new puppy owners</span>
       </div>
       <div class="feature-card">
         <div class="feature-icon icon-blue">🪪</div>
         <h3>Digital Dog ID Card</h3>
-        <p>Generate a shareable ID card with vaccination status. Perfect for groomers, boarding, and dog parks.</p>
+        <p>A beautiful, shareable ID card with your dog's photo, breed, and vaccination status. Perfect for groomers, boarding, and dog parks.</p>
+        <span class="feature-tag">Great for all owners</span>
       </div>
       <div class="feature-card">
         <div class="feature-icon icon-red">📍</div>
         <h3>Emergency Vet Finder</h3>
-        <p>Find open vet clinics near you instantly with ratings, hours, and distance. Act fast when every minute counts.</p>
+        <p>One tap finds open vet clinics near you with ratings, hours, and distance. When the AI says go — you know exactly where.</p>
+        <span class="feature-tag">Critical for emergencies</span>
       </div>
       <div class="feature-card">
         <div class="feature-icon icon-purple">📋</div>
         <h3>Complete Health Records</h3>
-        <p>Vaccinations, prescriptions, vet visits, appointment reminders, and health notes — all in one place.</p>
+        <p>Vet contacts, visit history, upcoming appointments, prescriptions, and health notes. Everything in one place, always ready to share.</p>
+        <span class="feature-tag">Great for senior dog owners</span>
       </div>
       <div class="feature-card">
         <div class="feature-icon icon-teal">🐕</div>
         <h3>Multi-Dog Support</h3>
-        <p>Add all your dogs and manage each one's records separately. Upgrade to Premium for unlimited dogs.</p>
+        <p>Managing more than one dog? Premium gives you unlimited profiles so every pup in your family gets their own complete health record.</p>
+        <span class="feature-tag">Premium feature</span>
       </div>
     </div>
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
-<section class="testimonials" id="testimonials">
+<section class="testimonials" id="reviews">
   <div class="testimonials-inner">
-    <div class="section-label">What dog owners say</div>
-    <h2 class="section-title">Peace of mind at 2am</h2>
-    <p class="section-sub">Real reviews from dog owners who've used PawChart when it mattered most.</p>
+    <div class="section-label">Real dog owners</div>
+    <h2 class="section-title">Peace of mind.<br>Every time.</h2>
+    <p class="section-sub">From first-time puppy parents to seasoned dog owners — PawChart gives everyone the confidence to act quickly and correctly.</p>
     <div class="testimonial-grid">
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
-        <div class="testimonial-badge">Verified</div>
-        <p class="testimonial-text">"My Golden started limping at midnight. PawChart told me to monitor at home and described exactly what to watch for. Saved me a $400 emergency visit. Vet confirmed it was a minor sprain."</p>
+        <div class="testimonial-owner-type">New puppy owner</div>
+        <p class="testimonial-text">"As a first-time dog owner I was Googling every little thing. PawChart completely replaced that. I describe the symptom, it asks the right questions, and gives me a clear answer. I actually sleep at night now."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">A</div>
+          <div class="author-info">
+            <div class="author-name">Ashley R.</div>
+            <div class="author-detail">Beagle puppy owner, California</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <div class="testimonial-owner-type">Senior dog owner</div>
+        <p class="testimonial-text">"My Golden is 11 and I worry about everything. The AI picked up on symptoms I didn't even realize were related and told me to go to the ER. The vet said we caught it early because of that. I can't thank this app enough."</p>
         <div class="testimonial-author">
           <div class="author-avatar">S</div>
           <div class="author-info">
@@ -407,25 +484,13 @@
       </div>
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
-        <div class="testimonial-badge">Verified</div>
-        <p class="testimonial-text">"The AI picked up on bloat symptoms in my Great Dane before I even realized how serious it was. It told me to go to the ER immediately. The vet said we caught it just in time."</p>
+        <div class="testimonial-owner-type">Anxious dog parent</div>
+        <p class="testimonial-text">"I used to rush to the emergency vet constantly because I didn't know what was serious. PawChart told me to monitor at home and described exactly what to watch for. Saved me a $600 emergency visit. The vet confirmed it was nothing serious."</p>
         <div class="testimonial-author">
           <div class="author-avatar">J</div>
           <div class="author-info">
             <div class="author-name">James T.</div>
-            <div class="author-detail">Great Dane owner, Texas</div>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <div class="testimonial-badge">Verified</div>
-        <p class="testimonial-text">"I'm a first-time dog owner and this app has given me so much confidence. I no longer panic over every little thing. I just open PawChart and get a clear answer."</p>
-        <div class="testimonial-author">
-          <div class="author-avatar">A</div>
-          <div class="author-info">
-            <div class="author-name">Ashley R.</div>
-            <div class="author-detail">Beagle owner, California</div>
+            <div class="author-detail">Labrador owner, Texas</div>
           </div>
         </div>
       </div>
@@ -437,8 +502,8 @@
 <section class="how">
   <div class="how-inner">
     <div class="section-label" style="color:#F5A623;">Simple to use</div>
-    <h2 class="section-title">From symptom to answer in 60 seconds</h2>
-    <p class="section-sub">No medical knowledge required. Just describe what you're seeing.</p>
+    <h2 class="section-title">From symptom to answer<br>in under 60 seconds</h2>
+    <p class="section-sub">No medical knowledge required. No endless Googling. Just describe what you're seeing and PawChart takes it from there.</p>
     <div class="steps">
       <div class="step">
         <div class="step-num">1</div>
@@ -448,18 +513,42 @@
       <div class="step">
         <div class="step-num">2</div>
         <h3>Answer follow-ups</h3>
-        <p>The AI asks targeted questions factoring in your dog's breed, age, and weight.</p>
+        <p>The AI asks targeted questions based on your dog's breed, age, and weight — no guessing.</p>
       </div>
       <div class="step">
         <div class="step-num">3</div>
-        <h3>Get your answer</h3>
-        <p>Watch at home, see a vet soon, or go to the ER now — clear and immediate.</p>
+        <h3>Get a clear answer</h3>
+        <p>Watch at home, see a vet soon, or go to the ER now. No ambiguity, no anxiety spiral.</p>
       </div>
       <div class="step">
         <div class="step-num">4</div>
-        <h3>Find help fast</h3>
-        <p>If you need a vet, PawChart finds the nearest open clinic instantly.</p>
+        <h3>Find help instantly</h3>
+        <p>If you need a vet, one tap finds open clinics near you sorted by distance and rating.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- URGENCY -->
+<section class="urgency">
+  <div class="section-label">Always know what to do</div>
+  <h2 class="section-title">Three clear answers.<br>No more guessing.</h2>
+  <p class="section-sub">PawChart replaces panic with clarity. Every symptom check ends with one of three clear recommendations.</p>
+  <div class="urgency-cards">
+    <div class="urgency-card green">
+      <span class="urgency-dot green"></span><strong style="color:#27500A;">Watch at home</strong>
+      <h3>Monitor and rest</h3>
+      <p>Your dog's symptoms are mild. PawChart tells you exactly what to watch for and when to escalate.</p>
+    </div>
+    <div class="urgency-card amber">
+      <span class="urgency-dot amber"></span><strong style="color:#633806;">See vet soon</strong>
+      <h3>Within 24–48 hours</h3>
+      <p>Your dog needs veterinary attention soon. Book an appointment today — don't wait it out.</p>
+    </div>
+    <div class="urgency-card red">
+      <span class="urgency-dot red"></span><strong style="color:#791F1F;">Go to ER now</strong>
+      <h3>Emergency care needed</h3>
+      <p>This is urgent. PawChart's vet finder shows you the nearest open emergency clinic immediately.</p>
     </div>
   </div>
 </section>
@@ -468,8 +557,8 @@
 <section class="pricing" id="pricing">
   <div class="pricing-inner">
     <div class="section-label">Simple pricing</div>
-    <h2 class="section-title">Start free, upgrade anytime</h2>
-    <p style="color:#666;font-size:16px;line-height:1.7;">Free to download with 3 symptom checks included. Upgrade for unlimited access.</p>
+    <h2 class="section-title">Start free.<br>Upgrade when you're ready.</h2>
+    <p style="color:#666;font-size:16px;line-height:1.7;">PawChart is free to download with 3 symptom checks included. Premium unlocks unlimited everything — because your dog deserves it.</p>
     <div class="pricing-cards">
       <div class="pricing-card">
         <div class="plan-name">Free</div>
@@ -491,9 +580,9 @@
         <div class="price-period">per month · or $39.99/year</div>
         <ul class="pricing-features">
           <li><span class="check">✓</span> Unlimited AI symptom checks</li>
-          <li><span class="check">✓</span> Unlimited dogs</li>
-          <li><span class="check">✓</span> Everything in Free</li>
-          <li><span class="check">✓</span> Breed-aware triage</li>
+          <li><span class="check">✓</span> Unlimited dog profiles</li>
+          <li><span class="check">✓</span> Full health records & vet visits</li>
+          <li><span class="check">✓</span> Appointment reminders</li>
           <li><span class="check">✓</span> 7-day free trial</li>
         </ul>
         <a href="https://play.google.com/store/apps/details?id=com.pawchart.app" class="btn-plan filled">Start free trial</a>
@@ -505,12 +594,13 @@
 
 <!-- CTA -->
 <section class="cta">
-  <h2>Your dog can't tell you<br>what's wrong. We can help.</h2>
-  <p>Download PawChart free and get peace of mind the next time something seems off.</p>
+  <h2>Your dog trusts you<br>to make the right call.</h2>
+  <p>PawChart makes sure you always know what to do — whether it's 2pm or 2am. Download free and try it today.</p>
   <a href="https://play.google.com/store/apps/details?id=com.pawchart.app" class="btn-dark">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M3 20.5v-17c0-.83 1-1.3 1.63-.78l14 8.5c.57.35.57 1.21 0 1.56l-14 8.5C4 21.8 3 21.33 3 20.5z"/></svg>
     Download on Google Play
   </a>
+  <p class="cta-fine">Free to download · Android · 7-day premium trial</p>
 </section>
 
 <!-- FOOTER -->
@@ -524,7 +614,7 @@
     <a href="mailto:admin@ifs-jobs.com">Contact</a>
     <a href="https://play.google.com/store/apps/details?id=com.pawchart.app">Google Play</a>
   </div>
-  <p class="footer-copy">© 2026 PawChart. All rights reserved.</p>
+  <p class="footer-copy">© 2026 PawChart. Not a substitute for veterinary advice.</p>
 </footer>
 
 </body>
